@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TOYOTA.MainPage">
+
+    <Grid>
+        <!-- Imagen de fondo que ocupa toda la pantalla -->
+        <Image Source="fondologin.png" HorizontalOptions="Fill" VerticalOptions="Fill" />
+
+        <!-- Contenedor principal con Padding y centrado vertical -->
+        <Grid VerticalOptions="CenterAndExpand" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- StackLayout que contiene los controles -->
+            <StackLayout Grid.Row="1" Padding="10" VerticalOptions="Center" HorizontalOptions="Center">
+                <!-- Entry de Correo electrónico -->
+                <Entry Placeholder="Correo electrónico" WidthRequest="250" HorizontalOptions="Center" 
+                       PlaceholderColor="#D60000" TextColor="Black" x:Name="usr"/>
+                <!-- Entry de Contraseña -->
+                <Entry Placeholder="Contraseña" WidthRequest="250" PlaceholderColor="#D60000" IsPassword="True" 
+                       TextColor="Black" x:Name="pwd"/>
+                <!-- Botón de Iniciar sesión -->
+                <Button Text="Iniciar Sesión" WidthRequest="250" BackgroundColor="Red" TextColor="White" x:Name="BtnIr"/>
+            </StackLayout>
+
+            <!-- StackLayout para los botones de recuperación y registro, en la parte inferior -->
+            <StackLayout Grid.Row="2" Padding="10" VerticalOptions="End" HorizontalOptions="Center">
+                <!-- Botón de Recuperar Contraseña -->
+                <Button Text="Recuperar Contraseña" BackgroundColor="White" TextColor="Black" 
+                        BorderColor="#003300" BorderWidth="1" FontAttributes="Bold" />
+                <!-- Botón de Registrarse -->
+                <Button Text="Registrarse" BackgroundColor="White" TextColor="Black" 
+                        BorderColor="#003300" BorderWidth="1" FontAttributes="Bold"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

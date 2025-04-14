@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            x:Class="TOYOTA.AutosInfo.Hilux"  
+            Title="Hilux">  
+   <ScrollView>  
+       <StackLayout Padding="20" Spacing="20" BackgroundColor="White">  
+
+           <!-- Imagen del vehículo -->  
+           <Frame HasShadow="True" CornerRadius="15" Padding="0" WidthRequest="400">  
+               <Image Source="hilux.png"  
+                      Aspect="AspectFill"  
+                      HorizontalOptions="FillAndExpand"  
+                      VerticalOptions="FillAndExpand"  
+                      HeightRequest="250"/>  
+           </Frame>  
+
+           <!-- Nombre y modelo -->  
+           <Label Text="Toyota Hilux 2025"  
+                  FontSize="24"  
+                  FontAttributes="Bold"  
+                  TextColor="#212121"/>  
+
+           <!-- Especificaciones clave -->  
+           <Grid ColumnSpacing="20" RowSpacing="10">  
+               <Grid.RowDefinitions>  
+                   <RowDefinition Height="Auto"/>  
+                   <RowDefinition Height="Auto"/>  
+               </Grid.RowDefinitions>  
+               <Grid.ColumnDefinitions>  
+                   <ColumnDefinition Width="*"/>  
+                   <ColumnDefinition Width="*"/>  
+                   <ColumnDefinition Width="*"/>  
+               </Grid.ColumnDefinitions>  
+
+               <!-- Motor -->  
+               <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center">  
+                   <Image Source="motorcoche.png" HeightRequest="40"/>  
+                   <Label Text="2.8L Turbo" FontSize="14" TextColor="#424242"/>  
+               </StackLayout>  
+
+               <!-- Combustible -->  
+               <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">  
+                   <Image Source="bombagasolina.png" HeightRequest="40"/>  
+                   <Label Text="Diésel" FontSize="14" TextColor="#424242"/>  
+               </StackLayout>  
+
+               <!-- Transmisión -->  
+               <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Center">  
+                   <Image Source="transmisionmanual.png" HeightRequest="40"/>  
+                   <Label Text="Manual / Automática" FontSize="14" TextColor="#424242"/>  
+               </StackLayout>  
+           </Grid>  
+
+           <!-- Descripción -->  
+           <Label Text="Toyota Hilux 2025 ofrece una combinación perfecta entre potencia, resistencia y tecnología. Diseñada para el trabajo pesado y la aventura, está equipada con un motor diésel de 2.8L Turbo que brinda un excelente rendimiento tanto en carretera como fuera de ella. Su diseño exterior robusto se complementa con detalles modernos y agresivos, haciendo de la Hilux una pick-up imponente.  
+
+En su interior, cuenta con sistema multimedia compatible con Apple CarPlay y Android Auto, cámara de reversa, aire acondicionado automático y materiales resistentes pensados para el uso diario. Además, incorpora avanzadas tecnologías de seguridad como control de estabilidad, asistente de arranque en pendientes y múltiples airbags. Toyota Hilux 2025 es sinónimo de confiabilidad y versatilidad para los que buscan rendimiento sin comprometer confort ni estilo."  
+                  TextColor="#616161"  
+                  LineHeight="1.5"/>
+
+           <Button Text="Reservar Vehiculo"  BackgroundColor="#E53935"   TextColor="White"  CornerRadius="10"  HeightRequest="50"   FontAttributes="Bold"  Clicked="OnSolicitarInformacionClicked"/>
+
+        </StackLayout>  
+       
+   </ScrollView>  
+</ContentPage>

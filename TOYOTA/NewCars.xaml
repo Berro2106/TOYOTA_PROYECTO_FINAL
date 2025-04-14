@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TOYOTA.NewCars"
+             Title="Autos Nuevos"
+             BackgroundColor="White">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="20">
+            <!-- Auto 1 -->
+            <Frame BackgroundColor="Red" CornerRadius="10" Padding="5">
+                <Frame BackgroundColor="White" CornerRadius="5" Padding="10">
+                    <VerticalStackLayout>
+                        <Image Source="car1.png" Aspect="AspectFill" WidthRequest="400" HeightRequest="200" />
+                        <Label Text="Modelo: Toyota Corolla 2025" FontSize="18" TextColor="Red" FontAttributes="Bold" />
+                        <Label Text="Motor: 2.0L Dynamic Force" FontSize="14" TextColor="Black" />
+                        <Label Text="Transmisión: CVT" FontSize="14" TextColor="Black" />
+                        <Label Text="Precio: $25,000 USD" FontSize="14" TextColor="Black" />
+                        <Button Text="Ver Detalles" BackgroundColor="Red" TextColor="White" CornerRadius="5" Clicked="OnCorollaButtonClicked" />
+                    </VerticalStackLayout>
+                </Frame>
+            </Frame>
+
+            <!-- Auto 2 -->
+            <Frame BackgroundColor="Red" CornerRadius="10" Padding="5">
+                <Frame BackgroundColor="White" CornerRadius="5" Padding="10">
+                    <VerticalStackLayout>
+                     <Image Source="car2.jpg" Aspect="AspectFill" WidthRequest="350" HeightRequest="200" />
+                        <Label Text="Modelo: Toyota RAV4 2025" FontSize="18" TextColor="Red" FontAttributes="Bold" />
+                        <Label Text="Motor: 2.5L Dynamic Force" FontSize="14" TextColor="Black" />
+                        <Label Text="Transmisión: Automática de 8 velocidades" FontSize="14" TextColor="Black" />
+                        <Label Text="Precio: $30,000 USD" FontSize="14" TextColor="Black" />
+                        <Button Text="Ver Detalles" BackgroundColor="Red" TextColor="White" CornerRadius="5" Clicked="OnRAV4ButtonClicked" />
+                    </VerticalStackLayout>
+                </Frame>
+            </Frame>
+
+            <!-- Auto 3 -->
+            <Frame BackgroundColor="Red" CornerRadius="10" Padding="5">
+                <Frame BackgroundColor="White" CornerRadius="5" Padding="10">
+                    <VerticalStackLayout>
+                        <Image Source="car3.png" Aspect="AspectFill" WidthRequest="350" HeightRequest="200" />
+                        <Label Text="Modelo: Land Cruiser Prado 2025" FontSize="18" TextColor="Red" FontAttributes="Bold" />
+                        <Label Text="Motor: 2755, 16V DOHC, 4Cyl, D-4D" FontSize="14" TextColor="Black" />
+                        <Label Text="Transmisión: Automática de 8 velocidades" FontSize="14" TextColor="Black" />
+                        <Label Text="Precio: $84.300 USD" FontSize="14" TextColor="Black" />
+                        <Button Text="Ver Detalles" BackgroundColor="Red" TextColor="White" CornerRadius="5" Clicked="OnPradoButtonClicked"/>
+                    </VerticalStackLayout>
+            </Frame>
+            </Frame>
+
+            <!-- Auto 4 -->
+
+            <Frame BackgroundColor="Red" CornerRadius="10" Padding="5">
+                <Frame BackgroundColor="White" CornerRadius="5" Padding="10">
+                    <VerticalStackLayout>
+                        <Image Source="car4.jpg" Aspect="AspectFill" WidthRequest="350" HeightRequest="200" />
+                        <Label Text="Modelo: Toyota Hilux 2025" FontSize="18" TextColor="Red" FontAttributes="Bold" />
+                        <Label Text="Motor: 2.5L Dynamic Force" FontSize="14" TextColor="Black" />
+                        <Label Text="Transmisión: Automática de 8 velocidades" FontSize="14" TextColor="Black" />
+                        <Label Text="Precio: $30,000 USD" FontSize="14" TextColor="Black" />
+                        <Button Text="Ver Detalles" BackgroundColor="Red" TextColor="White" CornerRadius="5" Clicked="OnHiluxButtonClicked" />
+                    </VerticalStackLayout>
+                </Frame>
+            </Frame>
+
+        
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            xmlns:system="clr-namespace:System;assembly=System.Runtime"  
+            x:Class="TOYOTA.AutosInfo.FormularioContacto"  
+            Title="FormularioContacto">  
+   <ScrollView>  
+       <VerticalStackLayout Padding="20" Spacing="25" BackgroundColor="#F5F5F5">  
+
+           <!-- Encabezado del formulario -->  
+           <Frame BackgroundColor="#FFFFFF"  
+           CornerRadius="20"  
+           Padding="25"  
+           HasShadow="True">  
+
+               <VerticalStackLayout Spacing="20">  
+
+                   <!-- Logo / Título -->  
+                   <Label Text="Solicitud de información"  
+                   FontSize="28"  
+                   FontAttributes="Bold"  
+                   TextColor="#EB0A1E"  
+                   HorizontalOptions="Center" />  
+
+                   <!-- Línea divisora -->  
+                   <BoxView HeightRequest="2" BackgroundColor="#EB0A1E" HorizontalOptions="Fill" />  
+
+                   <!-- Selección del vehículo -->  
+                   <Label Text="Selecciona un vehículo"  
+                   FontAttributes="Bold"  
+                   FontSize="16"  
+                   TextColor="#424242" />  
+                   <Frame BackgroundColor="#F0F0F0" CornerRadius="10" Padding="10" HasShadow="False">  
+                       <Picker x:Name="vehiculoPicker"  
+                        Title="Elige tu modelo"  
+                        TextColor="#212121">  
+                           <Picker.ItemsSource>  
+                               <x:Array Type="{x:Type x:String}">  
+                                   <x:String>Corolla</x:String>  
+                                   <x:String>Hilux</x:String>  
+                                   <x:String>Rav4</x:String>  
+                                   <x:String>LandCruiser</x:String>  
+                               </x:Array>  
+                           </Picker.ItemsSource>  
+                       </Picker>  
+                   </Frame>  
+
+                   <!-- Nombre completo -->  
+                   <Label Text="Nombre completo"  
+                   FontAttributes="Bold"  
+                   FontSize="16"  
+                   TextColor="#424242"/>  
+                   <Frame BackgroundColor="#F0F0F0" CornerRadius="10" Padding="10" HasShadow="False">  
+                       <Entry x:Name="nombreEntry" Placeholder="Tu nombre completo" TextColor="#212121" />  
+                   </Frame>  
+
+                   <!-- Cedula -->  
+                   <Label Text="Cédula"  
+                   FontAttributes="Bold"  
+                   FontSize="16"  
+                   TextColor="#424242"/>  
+                   <Frame BackgroundColor="#F0F0F0" CornerRadius="10" Padding="10" HasShadow="False">  
+                       <Entry x:Name="cedulaEntry" Placeholder="Número de cédula" Keyboard="Numeric" TextColor="#212121"/>  
+                   </Frame>  
+
+                   <!-- Teléfono -->  
+                   <Label Text="Teléfono"  
+                   FontAttributes="Bold"  
+                   FontSize="16"  
+                   TextColor="#424242"/>  
+                   <Frame BackgroundColor="#F0F0F0" CornerRadius="10" Padding="10" HasShadow="False">  
+                       <Entry x:Name="telefonoEntry" Placeholder="Número de contacto" Keyboard="Telephone" TextColor="#212121"/>  
+                   </Frame>  
+
+                   <!-- Fecha y hora -->  
+                   <Label Text="Fecha y hora"  
+                   FontAttributes="Bold"  
+                   FontSize="16"  
+                   TextColor="#424242"/>  
+                   <Frame BackgroundColor="#F0F0F0" CornerRadius="10" Padding="10" HasShadow="False">  
+                       <VerticalStackLayout Spacing="10">  
+                           <DatePicker x:Name="fechaPicker" Date="{x:Static system:DateTime.Now}" TextColor="#212121"/>  
+                           <TimePicker x:Name="horaPicker" TextColor="#212121"/>  
+                       </VerticalStackLayout>  
+                   </Frame>  
+
+                   <!-- Comentarios -->  
+                   <Label Text="Comentarios"  
+                   FontAttributes="Bold"  
+                   FontSize="16"  
+                   TextColor="#424242"/>  
+                   <Frame BackgroundColor="#F0F0F0" CornerRadius="10" Padding="10" HasShadow="False">  
+                       <Editor x:Name="comentariosEditor" Placeholder="Mensaje o consulta..." AutoSize="TextChanges" TextColor="#212121"/>  
+                   </Frame>  
+
+                   <!-- Botón enviar -->  
+                   <Button Text="Enviar solicitud"  
+                    BackgroundColor="#EB0A1E"  
+                    TextColor="White"  
+                    CornerRadius="10"  
+                    FontAttributes="Bold"  
+                    FontSize="18"  
+                    HeightRequest="50"
+                    Clicked="OnEnviarClicked"/>  
+                   
+               </VerticalStackLayout>  
+           </Frame>  
+       </VerticalStackLayout>  
+   </ScrollView>  
+</ContentPage>

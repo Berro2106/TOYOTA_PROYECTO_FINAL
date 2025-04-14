@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TOYOTA.Views.VerSolicitudesPage"
+             Title="VerSolicitudesPage">
+    <StackLayout Padding="20">
+        <ListView x:Name="SolicitudesListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BorderColor="Gray" Padding="10" Margin="5">
+                            <StackLayout>
+                                
+                                <Label Text="{Binding Nombre}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Cedula}"/>
+                                <Label Text="{Binding Vehiculo}" />
+                                <Label Text="{Binding Telefono}" />
+                                <Label Text="{Binding Comentarios}" />
+                                <Label Text="{Binding Fecha}" FontSize="12"/>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TOYOTA.AutosInfo.LandCruiserPrado"
+             Title="LandCruiserPrado">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20" BackgroundColor="White">
+
+            <!-- Imagen del vehículo -->
+            <Frame HasShadow="True" CornerRadius="15" Padding="0">
+                <Image Source="landcruiser2.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HeightRequest="240"/>
+            </Frame>
+
+            <!-- Nombre y modelo -->
+            <Label Text="Toyota Corolla 2025"  
+                  FontSize="24"  
+                  FontAttributes="Bold"  
+                  TextColor="#212121"/>
+
+            <!-- Especificaciones clave -->
+            <Grid ColumnSpacing="20" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Motor -->
+                <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center">
+                    <Image Source="motorcoche.png" HeightRequest="40"/>
+                    <Label Text="2.0L 4Cil" FontSize="14" TextColor="#424242"/>
+                </StackLayout>
+
+                <!-- Combustible -->
+                <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                    <Image Source="bombagasolina.png" HeightRequest="40"/>
+                    <Label Text="Gasolina" FontSize="14" TextColor="#424242"/>
+                </StackLayout>
+
+                <!-- Transmisión -->
+                <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Center">
+                    <Image Source="transmisionmanual.png" HeightRequest="40"/>
+                    <Label Text="Automática" FontSize="14" TextColor="#424242"/>
+                </StackLayout>
+            </Grid>
+
+            <!-- Descripción -->
+            <Label Text="Toyota Land Cruiser 2025 combina lujo, durabilidad y un rendimiento todoterreno sin igual. Equipado con un potente motor turbo híbrido de 2.4L y tracción 4x4, este icónico SUV está diseñado para enfrentar cualquier terreno con confianza y elegancia. Su nuevo diseño exterior mantiene las líneas robustas que lo caracterizan, 
+ahora con un estilo más refinado y moderno. En su interior, ofrece un ambiente premium con materiales de alta calidad, pantalla táctil de 12.3 pulgadas, compatibilidad con Apple CarPlay y Android Auto, además de avanzados sistemas de asistencia al conductor como control crucero adaptativo, monitoreo de punto ciego y frenado autónomo de emergencia. Ideal para quienes buscan aventura, potencia y sofisticación en un solo vehículo, el Land Cruiser 2025 reafirma su legado como uno de los SUV más confiables del mundo."  
+                  TextColor="#616161"  
+                  LineHeight="1.5"/>
+
+            <Button Text="Reservar Vehiculo"  BackgroundColor="#E53935"   TextColor="White"  CornerRadius="10"  HeightRequest="50"   FontAttributes="Bold"  Clicked="OnSolicitarInformacionClicked"/>
+
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

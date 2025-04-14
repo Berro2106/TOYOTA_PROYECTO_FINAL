@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TOYOTA.AutosInfo.RAV4"
+             Title="RAV4">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20" BackgroundColor="White">
+
+            <!-- Imagen del vehículo -->
+            <Frame HasShadow="True" CornerRadius="15" Padding="0">
+                <Image Source="rav4.jpg"
+                   Aspect="AspectFill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
+                   HeightRequest="200"/>
+            </Frame>
+
+            <!-- Nombre y modelo -->
+            <Label Text="Toyota RAV4 2025"  
+              FontSize="24"  
+              FontAttributes="Bold"  
+              TextColor="#212121"/>
+
+            <!-- Especificaciones clave -->
+            <Grid ColumnSpacing="20" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Motor -->
+                <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Center">
+                    <Image Source="motorcoche.png" HeightRequest="40"/>
+                    <Label Text="2.5L Híbrido" FontSize="14" TextColor="#424242"/>
+                </StackLayout>
+
+                <!-- Combustible -->
+                <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center">
+                    <Image Source="bombagasolina.png" HeightRequest="40"/>
+                    <Label Text="Híbrido" FontSize="14" TextColor="#424242"/>
+                </StackLayout>
+
+                <!-- Transmisión -->
+                <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Center">
+                    <Image Source="transmisionmanual.png" HeightRequest="40"/>
+                    <Label Text="CVT Automática" FontSize="14" TextColor="#424242"/>
+                </StackLayout>
+            </Grid>
+
+            <!-- Descripción -->
+            <Label Text="El Toyota RAV4 2025 redefine el segmento de SUVs compactos con su diseño audaz, eficiencia híbrida y tecnología avanzada. Equipado con un motor híbrido de 2.5 litros y tracción disponible en las cuatro ruedas, ofrece un equilibrio perfecto entre rendimiento y economía de combustible. Su exterior moderno destaca con líneas agresivas, parrilla deportiva y faros LED. 
+
+En el interior, el RAV4 ofrece comodidad y conectividad gracias a una pantalla táctil de 10.5 pulgadas, integración con Apple CarPlay y Android Auto, y un sistema de sonido JBL en versiones superiores. Incluye Toyota Safety Sense con frenado de emergencia, control crucero adaptativo y asistencia de mantenimiento de carril. Ideal para la ciudad o aventuras fuera del camino, el RAV4 es una opción versátil y confiable para quienes buscan estilo, eficiencia y seguridad en un solo vehículo."  
+              TextColor="#616161"  
+              LineHeight="1.5"/>
+
+            <Button Text="Reservar Vehiculo"  BackgroundColor="#E53935"   TextColor="White"  CornerRadius="10"  HeightRequest="50"   FontAttributes="Bold"  Clicked="OnSolicitarInformacionClicked"/>
+
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TOYOTA.Ayuda"
+             Title="Ayuda">
+    <ScrollView>
+        <VerticalStackLayout BackgroundColor="#F5F5F5">
+
+            <!-- Título -->
+            <Label Text="Centro de Ayuda Toyota"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="#EB0A1E"
+               HorizontalOptions="Center"
+               Margin="20,30,20,10" />
+
+            <!-- Subtítulo -->
+            <Label Text="Consulta nuestros manuales interactivos o guías de uso"
+               FontSize="16"
+               TextColor="#555"
+               HorizontalOptions="Center"
+               Margin="20,0,20,10" />
+
+            <!-- WebView enmarcado -->
+            <Frame Margin="20"
+               CornerRadius="15"
+               HasShadow="True"
+               BackgroundColor="White"
+               HeightRequest="500">
+                <WebView Source="https://support.toyota.com/s/topic/0TO3h000000dW4oGAE/manuals?language=es"
+                     HorizontalOptions="Fill"
+                     VerticalOptions="Fill" />
+            </Frame>
+
+            <!-- Nota opcional -->
+            <Label Text="*Se requiere conexión a internet para visualizar el contenido."
+               FontSize="12"
+               TextColor="#888"
+               HorizontalOptions="Center"
+               Margin="20,10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
